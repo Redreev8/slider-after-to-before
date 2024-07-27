@@ -1,0 +1,88 @@
+$indentation: 16px
+$black: #03071e
+$brow: #370617
+$red: #d00000
+$yellow: #ffba08
+$white: #FFFFFF
+
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    margin: 0
+    padding: 0
+
+.slider
+    display: flex
+    position: relative
+    width: 508px
+    height: 740px
+    border: 4px solid $black
+    box-sizing: border-box
+.block
+    position: relative
+    width: 500px
+    height: 100%
+    background-color: $white
+    overflow: hidden
+    &:not(:first-child)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 99
+.bg
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $brow
+    width: 500px
+    height: 740px
+    &::before
+        content: ''
+        width: 120px
+        height: 120px
+        background-color: $red
+        border-radius: 50%
+    &--two
+        background-color: #ffbb00
+        &::before
+           background-color: #b38105
+    &--three
+        background-color: #0400ff
+        &::before
+           background-color: #040342
+    &--for
+        background-color: #00ff22
+        &::before
+           background-color: #034206
+
+.divider
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    left: 100%
+    width: 4px
+    height: 100%
+    background-color: $black
+    padding: 40px 0
+    box-sizing: border-box
+    z-index: 99
+    &--2
+        align-items: start
+    &--1
+        align-items: end
+    &__btn
+        flex-shrink: 0
+        display: flex
+        justify-content: center
+        align-content: center
+        background-color: $black
+        color: $white
+        width: 60px
+        height: 60px
+        border: none
+        border-radius: 100%
